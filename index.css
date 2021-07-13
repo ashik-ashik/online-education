@@ -364,5 +364,52 @@ header.header {
 /*===============================================
   ! popular courses seciton design
 ===============================================*/
+#welcome-online-learn {
+  padding: 50px 0;
+}
+#welcome-online-learn .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  align-items: center;
+}
+#welcome-online-learn .welcome-detail h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+#welcome-online-learn .welcome-detail p {
+  font-size: 16px;
+  color: #747e88;
+  margin-bottom: 25px;
+}
+#welcome-online-learn .welcome-detail a {
+  border-bottom: 2px solid #F1A82C;
+  padding: 3px 0;
+  font-weight: 600;
+  transition: all 400ms;
+}
+#welcome-online-learn .welcome-detail a i {
+  transition: all 400ms;
+  padding-left: 5px;
+}
+#welcome-online-learn .welcome-detail a:hover {
+  color: #F1A82C;
+}
+#welcome-online-learn .welcome-detail a:hover i {
+  padding-left: 15px;
+}
+#welcome-online-learn .welcome-img {
+  text-align: right;
+}
+#welcome-online-learn img {
+  width: 85%;
+}
+
+/*===============================================
+  welcome to online learn seciton design
+===============================================*/
+/*===============================================
+  ! welcome to online learn seciton design
+===============================================*/
 
 /*# sourceMappingURL=index.css.map */

@@ -307,3 +307,55 @@ header.header{
 /*===============================================
   ! popular courses seciton design
 ===============================================*/ 
+#welcome-online-learn{
+  padding: 50px 0;
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    align-items: center;
+  }
+  .welcome-detail{
+    h2{
+      font-size: $section-title-size;
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 16px;
+      color: $color-liht-dark;
+      margin-bottom: 25px;
+    }
+    a{
+      border-bottom: 2px solid $color-primary;
+      padding: 3px 0;
+      font-weight: 600;
+      transition: all 400ms;
+      i{
+        transition: all 400ms;
+        padding-left: 5px;
+      }
+    }
+    a:hover{
+      color: $color-primary;
+      i{
+        padding-left: 15px;
+      }
+    }
+  }
+  .welcome-img{
+    text-align: right;
+  }
+  img{
+    width: 85%;
+  }
+}
+
+/*===============================================
+  welcome to online learn seciton design
+===============================================*/ 
+
+/*===============================================
+  ! welcome to online learn seciton design
+===============================================*/ 
+
+
