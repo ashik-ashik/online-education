@@ -8,6 +8,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*------------------------------------
   @import all others fiels
 ------------------------------------*/
@@ -29,18 +33,35 @@ section {
   width: 90%;
 }
 
+.container-100 {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
 /*-------------------------------------
   Home page design general classes
 -------------------------------------*/
 header.header {
-  background: #000;
   height: 90px;
+  z-index: 1000;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  transition: all 500ms;
 }
 
 .header.scrolled {
   height: 70px;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: all 500ms;
 }
 
 .header .logo {
@@ -121,5 +142,67 @@ header.header {
 .header .menu li:last-child:hover::after {
   width: 100%;
 }
+
+/*===============================================
+  home secito design
+===============================================*/
+#home {
+  background: #283747 url(./images/hero-bg.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  margin: -90px 0 70px;
+  height: 110vh;
+  position: relative;
+}
+#home .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+}
+#home .home-left-image {
+  z-index: 2;
+}
+#home .home-left-image img:first-child {
+  position: absolute;
+  bottom: -40px;
+  left: 32%;
+  z-index: -1;
+}
+#home .home-left-image img:last-child {
+  z-index: -1;
+  width: 42%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#home .home-content {
+  padding-left: 100px;
+}
+#home .home-content .home-title {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.3em;
+}
+#home .home-content .home-title + p {
+  font-size: 16px;
+  color: #fff;
+  margin: 15px 0;
+}
+#home .home-content .home-title ~ a {
+  background: #F1A82C;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: #fff;
+  margin-top: 10px;
+}
+#home .home-content .home-title ~ a:hover {
+  background: #F3B242;
+}
+
+/*===============================================
+  ! home secito design
+===============================================*/
 
 /*# sourceMappingURL=index.css.map */

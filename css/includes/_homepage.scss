@@ -8,13 +8,18 @@
 // header area 
 //-------------------------
 header.header{
-  background: #000;
   height: 90px;
+  z-index: 1000;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  transition: all 500ms;
 }
 .header.scrolled{
   height: 70px;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: all 500ms;
 }
 .header .logo{
   display: flex;
@@ -84,3 +89,73 @@ header.header{
 .header .menu li:last-child:hover::after{
   width: 100%;
 }
+
+
+
+/*===============================================
+  home secito design
+===============================================*/ 
+#home{
+  background: $color-dark url(./images/hero-bg.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  margin: -90px 0 70px;
+  // z-index: -1;
+  // padding-top: 200px;
+  height: 110vh;
+  position: relative;
+  // display: none;
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+  }
+  .home-left-image{
+    //  position: relative;
+     z-index: 2;
+
+  img:first-child{
+      position: absolute;
+      bottom: -40px;
+      left: 32%;
+      z-index: -1;
+    }
+    img:last-child{
+      z-index: -1;
+      width: 42%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .home-content{
+    padding-left: 100px;
+    .home-title{
+      font-size: 60px;
+      color: #fff;
+      font-weight: 800;
+      line-height: 1.3em;
+    }
+    .home-title + p{
+      font-size: 16px;
+      color: #fff;
+      margin: 15px 0;
+    }
+    .home-title ~ a{
+      background: $color-primary;
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 20px;
+      color: #fff;
+      margin-top: 10px;
+    }
+    .home-title ~ a:hover{
+      background: $color-secondary;
+    }
+  }
+
+}
+/*===============================================
+  ! home secito design
+===============================================*/ 
