@@ -272,20 +272,12 @@ header.header{
   }
   
   .view-course{
-    padding: 20px 0;
+    padding: 50px 0 20px;
     display: flex;
     justify-content: center;
 
     .view-course-btn{
-      display: inline-block;
-      padding: 10px 30px;
-      border: 2px solid $color-primary;
-      color: $color-dark;
-      font-weight: 600;
-      border-radius: 23px;
-      position: relative;
-      transition: all 400ms;
-      overflow: hidden;
+      @extend %view-btn;
     }
     .view-course-btn::after{
       @extend %after-effect;
@@ -307,6 +299,11 @@ header.header{
 /*===============================================
   ! popular courses seciton design
 ===============================================*/ 
+
+/*===============================================
+  welcome to online learn seciton design
+===============================================*/ 
+
 #welcome-online-learn{
   padding: 50px 0;
   .container{
@@ -351,11 +348,66 @@ header.header{
 }
 
 /*===============================================
-  welcome to online learn seciton design
-===============================================*/ 
-
-/*===============================================
   ! welcome to online learn seciton design
 ===============================================*/ 
 
+
+/*===============================================
+  categories seciton design
+===============================================*/ 
+#categiries{
+  padding: 50px 0;
+
+  .catagory-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    .single-category{
+      box-shadow: #b0b0c21a 0px 0px 16px;
+      padding: 50px 40px;
+      text-align: center;
+      transition: box-shadow 400ms;
+      i{
+        font-size: 3em;
+        display: inline-block;
+        color: $color-dark;
+      }
+      h3{
+        font-size: $blog-title-size;
+        font-weight: normal;
+        margin-top: 20px;
+        color: $color-dark;
+      }
+    }
+    .single-category:hover{
+      box-shadow: #42425a1a 0px 0px 16px;
+    }
+  }
+  .all-categories{
+    padding: 40px 0 20px;
+    display: flex;
+    justify-content: center;
+    .view-all-categories{
+      @extend %view-btn;
+    }
+    .view-all-categories::after{
+      @extend %after-effect;
+      z-index: -1;
+      transform-origin: top right;
+      transform: scaleX(0);
+      transition: transform 400ms;
+    }
+    .view-all-categories:hover{
+      color: #fff;
+    }
+    .view-all-categories:hover::after{
+      transform-origin: bottom left;
+      transform: scaleX(1);
+    }
+  }
+}
+
+/*===============================================
+   !  categories seciton design
+===============================================*/ 
 
