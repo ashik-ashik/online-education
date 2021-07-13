@@ -1,5 +1,86 @@
 
-
 /*-------------------------------------
   Home page design general classes
 -------------------------------------*/
+
+
+//-------------------------
+// header area 
+//-------------------------
+header.header{
+  background: #000;
+  height: 90px;
+}
+.header.scrolled{
+  height: 70px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.header .logo{
+  display: flex;
+  align-items: center;
+}
+.header .logo img{
+  height: 45px;
+  width: auto;
+  margin-right: 12px;
+}
+.header .logo h4{
+  color: $color-primary;
+  font-size: 30px;
+}
+
+.header .navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header ul.menu{
+  display: flex;
+  align-items: center;
+}
+.header .menu li{
+  list-style-type: none;
+}
+.header .menu li a{
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all 300ms;
+}
+.header.scrolled .menu li a{
+  color: $color-dark;
+}
+.header .menu li:not(:last-child) a:hover{
+  color: $color-primary;
+}
+.header .menu li:last-child a{
+  border-radius: 20px;
+  transition: background 400ms;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  color: #fff;
+}
+.header .menu li:last-child{
+  background: $color-primary;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.header .menu li:last-child::after{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  background: $color-secondary;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  // z-index: ;
+  transition: width 400ms;
+}
+.header .menu li:last-child:hover::after{
+  width: 100%;
+}

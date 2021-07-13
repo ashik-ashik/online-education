@@ -2,3 +2,13 @@
 /*----------------------------------
   Global classes
 ----------------------------------*/
+header,
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  width: 90%;
+}

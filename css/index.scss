@@ -1,7 +1,12 @@
+/* @import google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* reset global default settings */ 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 /*------------------------------------
