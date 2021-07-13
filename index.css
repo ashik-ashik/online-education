@@ -61,7 +61,19 @@ a {
   color: #747e88;
 }
 
-#popular-courses .view-course .view-course-btn::after, .header .menu li:last-child::after {
+#categiries .all-categories .view-all-categories, #popular-courses .view-course .view-course-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid #F1A82C;
+  color: #283747;
+  font-weight: 600;
+  border-radius: 23px;
+  position: relative;
+  transition: all 400ms;
+  overflow: hidden;
+}
+
+#categiries .all-categories .view-all-categories::after, #popular-courses .view-course .view-course-btn::after, .header .menu li:last-child::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -332,20 +344,9 @@ header.header {
   transform: scale(1.3);
 }
 #popular-courses .view-course {
-  padding: 20px 0;
+  padding: 50px 0 20px;
   display: flex;
   justify-content: center;
-}
-#popular-courses .view-course .view-course-btn {
-  display: inline-block;
-  padding: 10px 30px;
-  border: 2px solid #F1A82C;
-  color: #283747;
-  font-weight: 600;
-  border-radius: 23px;
-  position: relative;
-  transition: all 400ms;
-  overflow: hidden;
 }
 #popular-courses .view-course .view-course-btn::after {
   z-index: -1;
@@ -363,6 +364,9 @@ header.header {
 
 /*===============================================
   ! popular courses seciton design
+===============================================*/
+/*===============================================
+  welcome to online learn seciton design
 ===============================================*/
 #welcome-online-learn {
   padding: 50px 0;
@@ -406,10 +410,60 @@ header.header {
 }
 
 /*===============================================
-  welcome to online learn seciton design
+  ! welcome to online learn seciton design
 ===============================================*/
 /*===============================================
-  ! welcome to online learn seciton design
+  categories seciton design
+===============================================*/
+#categiries {
+  padding: 50px 0;
+}
+#categiries .catagory-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+#categiries .catagory-wrapper .single-category {
+  box-shadow: #b0b0c21a 0px 0px 16px;
+  padding: 50px 40px;
+  text-align: center;
+  transition: box-shadow 400ms;
+}
+#categiries .catagory-wrapper .single-category i {
+  font-size: 3em;
+  display: inline-block;
+  color: #283747;
+}
+#categiries .catagory-wrapper .single-category h3 {
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 20px;
+  color: #283747;
+}
+#categiries .catagory-wrapper .single-category:hover {
+  box-shadow: #42425a1a 0px 0px 16px;
+}
+#categiries .all-categories {
+  padding: 40px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+#categiries .all-categories .view-all-categories::after {
+  z-index: -1;
+  transform-origin: top right;
+  transform: scaleX(0);
+  transition: transform 400ms;
+}
+#categiries .all-categories .view-all-categories:hover {
+  color: #fff;
+}
+#categiries .all-categories .view-all-categories:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+/*===============================================
+   !  categories seciton design
 ===============================================*/
 
 /*# sourceMappingURL=index.css.map */
