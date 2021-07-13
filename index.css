@@ -45,6 +45,34 @@ a {
   text-decoration: none;
 }
 
+.section-title {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.section-title h2 {
+  font-size: 45px;
+  color: #283747;
+  margin-bottom: 15px;
+}
+.section-title p {
+  font-size: 16px;
+  color: #747e88;
+}
+
+#popular-courses .view-course .view-course-btn::after, .header .menu li:last-child::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #F3B242;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  transition: transform 400ms;
+}
+
 /*-------------------------------------
   Home page design general classes
 -------------------------------------*/
@@ -128,14 +156,7 @@ header.header {
 }
 
 .header .menu li:last-child::after {
-  content: "";
-  position: absolute;
-  width: 0px;
-  height: 100%;
-  background: #F3B242;
-  top: 0;
-  left: 0;
-  border-radius: 20px;
+  width: 0;
   transition: width 400ms;
 }
 
@@ -144,7 +165,7 @@ header.header {
 }
 
 /*===============================================
-  home secito design
+  home seciton design
 ===============================================*/
 #home {
   background: #283747 url(./images/hero-bg.jpg);
@@ -202,7 +223,146 @@ header.header {
 }
 
 /*===============================================
-  ! home secito design
+  ! home seciton design
+===============================================*/
+/*===============================================
+  learn-new-skill seciton design
+===============================================*/
+#learn-new-skill {
+  padding: 70px 0 50px;
+}
+#learn-new-skill .all-new-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 50px;
+}
+#learn-new-skill .all-new-skills .single-skill {
+  padding: 40px 30px;
+  border-radius: 10px;
+  transition: all 400ms;
+  box-shadow: #6c6c8f0d 0px 4px 16px, #9090b10d 0px 8px 32px;
+}
+#learn-new-skill .all-new-skills .single-skill .skill-icon {
+  text-align: center;
+}
+#learn-new-skill .all-new-skills .single-skill .skill-icon .far,
+#learn-new-skill .all-new-skills .single-skill .skill-icon .bx {
+  display: inline-block;
+  padding: 20px;
+  font-size: 40px;
+  background: #fff;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  box-shadow: #11111a0d 0px 4px 16px, #11111a0d 0px 8px 32px;
+}
+#learn-new-skill .all-new-skills .single-skill .skill-content {
+  text-align: center;
+}
+#learn-new-skill .all-new-skills .single-skill .skill-content h3 {
+  font-size: 24px;
+  color: #283747;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+#learn-new-skill .all-new-skills .single-skill:hover {
+  box-shadow: #11111a0d 0px 6px 16px, #11111a0d 0px 10px 32px;
+}
+
+/*===============================================
+  ! learn-new-skill seciton design
+===============================================*/
+/*===============================================
+  popular courses seciton design
+===============================================*/
+#popular-courses {
+  padding: 50px;
+}
+#popular-courses .all-courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px 40px;
+}
+#popular-courses .all-courses .single-course {
+  padding: 30px;
+  text-align: center;
+  box-shadow: #7f7f910d 0px 2px 10px, #a2a2b80d 0px 4px 12px;
+  transition: box-shadow 400ms;
+  border-radius: 10px;
+}
+#popular-courses .all-courses .single-course .course-image {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+#popular-courses .all-courses .single-course .course-image img {
+  transition: transform 400ms;
+}
+#popular-courses .all-courses .single-course .course-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #283747;
+  font-weight: normal;
+  transition: color 400ms;
+}
+#popular-courses .all-courses .single-course .course-title:hover {
+  color: #F1A82C;
+}
+#popular-courses .all-courses .single-course .course-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#popular-courses .all-courses .single-course .course-info .bx {
+  padding: 5px;
+  color: #F1A82C;
+  border: 1px solid;
+  border-radius: 50%;
+}
+#popular-courses .all-courses .single-course .course-info span:not(.course-price) {
+  color: #747e88;
+}
+#popular-courses .all-courses .single-course .course-info .course-price {
+  font-weight: 600;
+  font-size: 17px;
+  color: #F1A82C;
+}
+#popular-courses .all-courses .single-course:hover {
+  box-shadow: #11111a0d 0px 6px 16px, #11111a0d 0px 10px 32px;
+}
+#popular-courses .all-courses .single-course:hover .course-image img {
+  transform: scale(1.3);
+}
+#popular-courses .view-course {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+#popular-courses .view-course .view-course-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid #F1A82C;
+  color: #283747;
+  font-weight: 600;
+  border-radius: 23px;
+  position: relative;
+  transition: all 400ms;
+  overflow: hidden;
+}
+#popular-courses .view-course .view-course-btn::after {
+  z-index: -1;
+  transform-origin: top right;
+  transform: scaleX(0);
+  transition: transform 400ms;
+}
+#popular-courses .view-course .view-course-btn:hover {
+  color: #fff;
+}
+#popular-courses .view-course .view-course-btn:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+/*===============================================
+  ! popular courses seciton design
 ===============================================*/
 
 /*# sourceMappingURL=index.css.map */
