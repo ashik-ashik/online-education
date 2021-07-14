@@ -13,3 +13,21 @@ window.onscroll = function(){
     header.classList.add('scrolled')
   }
 }
+
+
+// video play
+let video = document.querySelector('#differ-video');
+let playVideo = document.querySelector('.video #play-video');
+
+playVideo.addEventListener('click',function(){
+    if(video.paused){
+        video.play();
+        playVideo.classList.remove('bx-play');
+        playVideo.classList.add('bx-pause');
+    }else{
+        video.pause();
+        playVideo.classList.remove('bx-pause');
+        playVideo.classList.add('bx-play');
+    }
+    playVideo.classList.add('active')
+});
