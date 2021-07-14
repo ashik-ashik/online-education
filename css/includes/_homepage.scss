@@ -411,3 +411,87 @@ header.header{
    !  categories seciton design
 ===============================================*/ 
 
+
+
+/*===============================================
+   makes different seciton design
+===============================================*/ 
+#makes-different{
+  padding: 100px 0;
+  justify-content: flex-start;
+  .container{
+    justify-self: flex-start;
+    // width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  video{
+    width: 100%;
+    // height: 100%;
+  }
+  .video{
+    position: relative;
+    .bx{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      padding: 20px;
+      background: #fff;
+      outline: 2px solid transparent;
+      transition: all .3s;
+      cursor: pointer;
+    }
+    .bx:hover{
+      outline-offset: 8px;
+      outline-color: #fff;
+      // border-radius: 50%;
+    }
+    .bx.active{
+      background: #ffffffaf;
+      top: 0%;
+      left: 0%;
+      transform: translate(10%, 10%);
+    }
+  }
+  .contents{
+    h2.title{
+      font-size: $section-title-size;
+      color: $color-dark;
+    }
+    h2.title+p{
+     color: #000;
+    }
+
+    .icon-box{
+      display: flex;
+      margin-top: 30px;
+      align-items: center;
+
+      .bx{
+        font-size: 40px;
+        box-shadow: #11111a1a 0px 0px 16px;
+        border-radius: 50%;
+        padding: 10px;
+      }
+    }
+    .icon{
+      margin-right: 20px;
+    }
+    .text{
+      h3{
+        font-weight: 600;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+/*===============================================
+   makes different seciton design
+===============================================*/ 
+
+
+
