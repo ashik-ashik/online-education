@@ -535,5 +535,87 @@ header.header {
 /*===============================================
    makes different seciton design
 ===============================================*/
+/*===============================================
+  instructors seciton design
+===============================================*/
+#instructors {
+  padding: 60px 0;
+}
+#instructors .instructor-wrapper {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+#instructors .instructor-img {
+  position: relative;
+  overflow: hidden;
+}
+#instructors .instructor-img img {
+  width: 100%;
+  transition: transform 0.4s;
+}
+#instructors .instructor-img .follow {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  transition: transform 0.4s;
+}
+#instructors .instructor-img .follow .bx {
+  font-size: 22px;
+  color: #283747;
+  transition: color 0.4s;
+  padding: 15px;
+}
+#instructors .instructor-img .follow .bx:hover {
+  color: #F1A82C;
+}
+#instructors .instructor-img .follow-1 {
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  border-left: 2px solid #F1A82C;
+}
+#instructors .instructor-img .follow-2 {
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  border-right: 2px solid #F1A82C;
+}
+#instructors .instructor-img .follow-3 {
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  border-left: 2px solid #F1A82C;
+}
+#instructors .instructor-img .follow-4 {
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+  border-right: 2px solid #F1A82C;
+}
+#instructors .single-instructor:hover .follow {
+  transform: translate(0%);
+}
+#instructors .single-instructor:hover img {
+  transform: scale(1.3);
+}
+#instructors .instructor-info {
+  padding: 10px 0;
+  text-align: center;
+}
+#instructors .instructor-info .instructor-name {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+#instructors .instructor-info .instructor-title {
+  font-weight: 500;
+}
+
+/*===============================================
+  ! instructors seciton design
+===============================================*/
 
 /*# sourceMappingURL=index.css.map */
