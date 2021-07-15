@@ -617,5 +617,53 @@ header.header {
 /*===============================================
   ! instructors seciton design
 ===============================================*/
+/*===============================================
+  Blogs seciton design
+===============================================*/
+#blogs {
+  padding: 70px 0;
+}
+#blogs .blogs-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+#blogs .blogs-wrapper .single-blog {
+  box-shadow: #11111a1a 0px 0px 16px;
+  transition: all 400ms;
+}
+#blogs .blogs-wrapper .blog-img {
+  overflow: hidden;
+}
+#blogs .blogs-wrapper .blog-img img {
+  transition: transform 600ms;
+}
+#blogs .blogs-wrapper .single-blog:hover {
+  box-shadow: #11111a0d 0px 4px 16px, #11111a0d 0px 8px 32px;
+  transform: translateY(-15px);
+}
+#blogs .blogs-wrapper .single-blog:hover .blog-img img {
+  transform: scale(1.4);
+}
+#blogs .blogs-wrapper .blog-content {
+  padding: 15px 15px 25px;
+  background: #fff;
+}
+#blogs .blogs-wrapper .blog-content h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  transition: all 400ms;
+  color: #283747;
+}
+#blogs .blogs-wrapper .blog-content h3:hover {
+  color: #F1A82C;
+}
+#blogs .blogs-wrapper .blog-content p {
+  font-size: 15px;
+}
+
+/*===============================================
+  ! Blogs seciton design
+===============================================*/
 
 /*# sourceMappingURL=index.css.map */
